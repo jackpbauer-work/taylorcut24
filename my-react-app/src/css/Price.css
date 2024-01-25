@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lato:wght@100;300&family=Raleway:wght@100&display=swap');
+
+.price-container {
+    width: 80%;
+    margin: auto;
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+}
+
+
+.price-h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}
+
+.price-p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.price-container h1,
+.price-container h2 {
+    text-align: center;
+}
+
+.prices {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.prices h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.prices p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.prices span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.included-excluded-wrapper,
+.payment-options {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.included-cost,
+.excluded-cost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    font-size: 1.5em;
+}
+
+.upcoming-included-list,
+.upcoming-excluded-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: .8em;
+}
+
+.payment-options {
+    flex-direction: column;
+    align-items: center;
+}
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.option h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.option p {
+    font-size: 1.4em;
+    line-height: .5;
+    align-items: center;
+    text-align: center;
+}
+
+.payment-options-h2 {
+    font-size: 3.0em;
+    margin-bottom: -3rem;
+}
+
+.winner {
+    color: white;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.made {
+    color: white;
+    font-size: 1.5rem;
+    align-items: center;
+    text-decoration: underline;
+}
+
+
+.payment-btn-deposit,
+.payment-btn-full {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0011ff;
+    color: rgb(249, 248, 250);
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    box-shadow: #ddd 0px 0px 3px 0px;
+    font-family: 'Cormorant Garamond', serif;
+    animation: floatAnimation 5s infinite;
+    }
+    
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0px);
+        }
+    
+        50% {
+            transform: translateY(-10px);
+        }
+    
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+
+.payment-btn:hover {
+    background-color: #0764d6;
+}
+
+@media (max-width: 480px) {
+    .price-container {
+        width: 95%;
+        font-size: 0.9em;
+        /* adjust main container's font size */
+    }
+
+    .price-h1 {
+        font-size: 2.5em;
+        margin-top: 90px;
+        /* decrease margin-top for smaller screens */
+    }
+
+    .prices h2 {
+        font-size: 2em;
+        /* adjust h2 font size inside .prices */
+    }
+
+    .included-excluded-wrapper,
+    .payment-options {
+        flex-direction: column;
+        /* stack elements vertically */
+    }
+
+    .included-cost,
+    .excluded-cost {
+        width: 100%;
+    }
+
+    .payment-options-h2 {
+        font-size: 2.5em;
+        margin-bottom: -1.5rem;
+        /* adjust margin */
+    }
+
+    .option {
+        padding-top: 40px;
+        /* adjust padding */
+    }
+
+    .option h3 {
+        font-size: 1.5em;
+        /* adjust h3 font size inside .option */
+    }
+
+    .option p {
+        font-size: 1.2em;
+        line-height: 1.2em;
+        /* adjust p font size inside .option */
+    }
+
+    .payment-btn-deposit,
+    .payment-btn-full {
+        padding: 5px 5px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lato:wght@100;300&family=Raleway:wght@100&display=swap');
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.faq-container h2 {
+    font-weight: 400;
+    color: #f8fafc;
+    /* Blue text color */
+    margin-bottom: 2rem;
+    /* Spacing below the title */
+    font-size: 3.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.faq-section {
+    /* Remove the background color */
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    padding: 2rem;
+    /* Spacious padding inside each FAQ section */
+    margin-bottom: 2rem;
+    /* Spacing between FAQ sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* A subtle shadow for a bit of depth */
+}
+
+.faq-section h3,
+.faq-section p,
+.faq-section li {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    /* White text color */
+    line-height: 1.5;
+}
+
+.faq-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    /* Spacing below each title for better separation */
+}
+
+.faq-section p {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    font-style: italic;
+    
+    /* Spacing below each paragraph for better separation */
+}
+
+.faq-section ul {
+    list-style-type: none;
+    margin-top: 5rem;
+}
+
+.faq-section li {
+    font-size: 20px;
+    /* Explicitly set the font size */
+    margin-bottom: 0.1rem;
+    line-height: 1.0;
+    color: #fff;
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 1rem;
+        margin-top: 5rem;
+    }
+
+    .faq-container h2 {
+        font-size: 2.5rem;
+    }
+
+    .faq-section h3 {
+        font-size: 2rem;
+    }
+
+    .faq-section p {
+        font-size: 1.2rem;
+        margin-top: 3rem;
+    }
+
+    .faq-section li {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
+    .faq-container {
+        margin-top: 3rem;
+    }
+
+    .faq-container h2 {
+        font-size: 2rem;
+    }
+
+    .faq-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .faq-section p {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    .faq-section li {
+        font-size: 16px;
+    }
+}

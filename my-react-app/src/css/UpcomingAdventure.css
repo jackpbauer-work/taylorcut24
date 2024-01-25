@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lato:wght@100;300&family=Raleway:wght@100&display=swap');
+
+.upcoming-adventure {
+    height: 100vh;
+    background-color: rgb(1, 31, 52);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.destination,
+.dates {
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.destination {
+    font-size: 4.5vw;
+    margin-top: 10vh;
+}
+
+.dates {
+    font-size: 2.0vw;
+    margin-top: 1vh;
+}
+
+.div-guatemala {
+    position: relative;
+    width: 75%;
+    height: 60%;
+    background-color: rgb(1, 31, 52);
+}
+
+.div-guatemala img,
+.destination.is-visible,
+.dates.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.div-guatemala img {
+    box-shadow: .1vw .5vw 2vw 1vw #bbbdc029;
+    border-radius: 6px;
+    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(160, 157, 157, 0.848);
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.div-guatemala:hover .overlay {
+    opacity: 1;
+}
+
+.button {
+    display: inline-block;
+    padding: 2em 3em;
+    margin-top: 2em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+    animation: floatAnimation 3s infinite;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.button h1 {
+    margin: 0;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.button .date {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button::before,
+.button::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.button:hover::before,
+.button:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Existing styles remain as they are */
+
+/* Start of mobile styles */
+@media only screen and (max-width: 768px) {
+    .upcoming-adventure {
+        height: 80vh;
+        /* Adjust height */
+    }
+
+    .destination {
+        font-size: 24px;
+        /* Adjust font-size */
+        margin-top: 60vw;
+    }
+
+    .dates {
+        font-size: 18px;
+        /* Adjust font-size */
+        margin-top: 1vh;
+    }
+
+    .div-guatemala {
+        width: 95%;
+        /* Take up almost full width on mobile */
+    }
+
+    .button {
+        padding: 1em 2em;
+        /* Scale down padding */
+        font-size: 1.5rem;
+        /* Adjust font-size */
+        border: 1px solid white;
+        /* Reduce border width */
+    }
+
+    .button h1 {
+        font-size: 2rem;
+        /* Adjust font-size */
+    }
+
+    .button .date {
+        font-size: 1rem;
+        /* Adjust font-size */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* typical iPhone screen width */
+    .destination {
+        font-size: 40px;
+        /* Reduced font-size for better mobile viewing */
+        margin-top: 40vw;
+    }
+
+    .dates {
+        font-size: 18px;
+        /* Reduced font-size for better mobile viewing */
+    }
+
+    .div-guatemala {
+        width: 100%;
+        /* Image container takes full width on mobile */
+        height: 40vh;
+        /* Reduced height for mobile, adjust as required */
+    }
+
+
+    .button {
+        padding: 1em 1.5em;
+        /* Reduced padding */
+        font-size: 1.5rem;
+        /* Adjusted font size */
+        margin-top: 1em;
+    }
+
+    .button h1 {
+        font-size: 2rem;
+        /* Adjusted font size */
+    }
+
+    .button .date {
+        font-size: 1rem;
+        /* Adjusted font size */
+    }
+}
